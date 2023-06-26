@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MLWallet_iOS" parallel="false" thread-count="1">  
+
+
+	<parameter name="browserType" value="Safari"/>
+<!--  <parameter name="InstallBuild" value="no"/>	  testflight/appstore/no  
+	
+	<parameter name="InstallBuild" value="testflight"/> -->
+	
+	<parameter name="runModule" value="Suite" />
+	<parameter name="runMode" value="Suites" />
+	<parameter name="testExecutionKey" value="PP-49" />
+	
+	
+
+	<listeners>
+		<listener class-name="com.extent.ExtentReporter" />
+		<!-- <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/> -->
+		<!-- <listener class-name="com.utility.MyTranformer"/> -->
+	</listeners>
+   
+	<test name="MLWallet_iOS">           
+
+		<classes> 
+		
+	           
+	       	 <class name="com.mlwallet.ios_scripts.MLWalletCashInViaBankScripts" />
+		 		  
+		 <!--        		     	 
+		 		<class name="com.mlwallet.ios_scripts.MLWalletCashOutWithdrawScripts" /> 		
+		 		<class name="com.mlwallet.ios_scripts.MLWalletSendTransferToMLWalletUserScripts" />	
+		 		
+		 		
+		 		<class name="com.mlwallet.ios_scripts.MLWalletLogoutScripts" />
+		 		<class name="com.mlwallet.ios_scripts.MLWalletHomeAndDashboard" /> 
+		 		<class name="com.mlwallet.ios_scripts.MLWalletTroubleSingingIn" /> 
+		 		<class name="com.mlwallet.ios_scripts.MLWalletSettingScripts" />
+		 		<class name="com.mlwallet.ios_scripts.MLWalletRegressionPayBillsScripts" />
+		 		<class name="com.mlwallet.ios_scripts.MLWalletBuyEload" /> 
+		 		 <class name="com.mlwallet.ios_scripts.MLWalletSendTransferToAnyMLBranchScripts" />
+		 		 <class name="com.mlwallet.ios_scripts.MLWalletLoginScripts" /> 
+		 		 <class name="com.mlwallet.ios_scripts.MLWalletCashInViaBranch" />
+		 		 
+		 		
+		 		<class name="com.mlwallet.ios_scripts.MLWalletRegistration" /> 
+			    <class name="com.mlwallet.ios_scripts.MLWalletBranchLocator" />
+			      -->
+   
+		</classes>
+	</test>
+</suite>
