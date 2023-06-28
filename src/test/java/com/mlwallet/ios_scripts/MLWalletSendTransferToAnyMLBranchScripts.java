@@ -1,6 +1,7 @@
 package com.mlwallet.ios_scripts;
 
 
+import org.testng.annotations.Test;
 import com.business.mlwallet.MLWalletiOSBusinessLogic;
 
 import org.testng.annotations.BeforeSuite;
@@ -19,7 +20,7 @@ public class MLWalletSendTransferToAnyMLBranchScripts {
 //============================================================================================//
 
 
- /*   @Test(priority = 1) 
+    @Test(priority = 1) 
     public void sendMoneyToMLBranch_STB_TC_01() throws Exception {
         MLWalletBusinessLogic.sendMoneyToMLBranch_STB_TC_01("true");
     }
@@ -120,191 +121,158 @@ public class MLWalletSendTransferToAnyMLBranchScripts {
     @Test(priority = 20) 
     public void sendMoneyToBranchAddRecipientPageUIValidation_STB_TC_21() throws Exception {
         MLWalletBusinessLogic.sendMoneyToBranchAddRecipientPageUIValidation_STB_TC_21();
-    } */
+    } 
     
     //============================Phase 2==================================================
     
-   // @Test(priority = 21) pass
+    @Test(priority = 21) //pass
     public void sendMoneyToMLBranchBuyerTierAccount_STB_TC_22() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchBuyerTierAccount_STB_TC_22();
     }
 
-  //  @Test(priority = 22)
+    @Test(priority = 22)
     public void sendMoneyToMLBranchSemiVerifiedTierAccount_STB_TC_23() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchSemiVerifiedTierAccount_STB_TC_23();
     }
 
-  // @Test(priority = 23)
+   @Test(priority = 23)
    public void sendMoneyToMLBranchBranchVerifiedAccount_STB_TC_24() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchBranchVerifiedAccount_STB_TC_24();
    }
 
-   //@Test(priority = 24)
+   @Test(priority = 24)
    public void sendMoneyToMLBranchFullyVerifiedAccount_STB_TC_25() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchFullyVerifiedAccount_STB_TC_25();
    }
 
- // @Test(priority = 25)
+  @Test(priority = 25)
   public void sendMoneyToMLBranchSemiVerifiedTierAccountMaxAmount_STB_TC_26() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchSemiVerifiedTierAccountMaxAmount_STB_TC_26();
   }
 
-  //@Test(priority = 26)
+  @Test(priority = 26)
   public void sendMoneyToMLBranchBranchVerifiedTierAccountMaxAmount_STB_TC_29() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchBranchVerifiedTierAccountMaxAmount_STB_TC_29();
   }
 
-  // @Test(priority = 27)
+  @Test(priority = 27)
   public void sendMoneyToMLBranchFullyVerifiedTierAccountMaxAmount_STB_TC_32() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchFullyVerifiedTierAccountMaxAmount_STB_TC_32();
   }
 
- @Test(priority = 28) //pending
+  @Test(priority = 28) 
   public void kwartaPadalaRates_STB_TC_35() throws Exception {
       MLWalletBusinessLogic.kwartaPadalaRates_STB_TC_35();
   }
 
-  //@Test(priority = 29) pass
+  @Test(priority = 29) //pass
   public void sendMoneyToMLBranchRatesValidationScenarioOne_STB_TC_36() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchRatesValidationScenarioOne_STB_TC_36("10");
   }
 
-   //@Test(priority = 30) pass
+  @Test(priority = 30) //pass
   public void sendMoneyToMLBranchRatesValidationScenarioTwo_STB_TC_37() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchRatesValidationScenarioTwo_STB_TC_37("70");
   }
 
-  // @Test(priority = 31) pass
+  @Test(priority = 31) //pass
   public void sendMoneyToMLBranchRatesValidationScenarioThree_STB_TC_38() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchRatesValidationScenarioThree_STB_TC_38("200");
   }
 
- // @Test(priority = 32)
+  @Test(priority = 32)
   public void sendMoneyToMLBranchRatesValidationScenarioFour_STB_TC_39() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchRatesValidationScenarioFour_STB_TC_39("350");
   }
 
-  //@Test(priority = 33) pass
+  @Test(priority = 33)// pass
   public void sendMoneyToMLBranchRatesValidationScenarioFive_STB_TC_40() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchRatesValidationScenarioFive_STB_TC_40("450");
   }
 
-  //@Test(priority = 34) pass
+  @Test(priority = 34)// pass
   public void sendMoneyToMLBranchRatesValidationScenarioSix_STB_TC_41() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchRatesValidationScenarioSix_STB_TC_41("550");
   }
 
 
-  //  @Test(priority = 35) pass
+  @Test(priority = 35) //pass
   public void sendMoneyToMLBranchRatesValidationScenarioSeven_STB_TC_42() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchRatesValidationScenarioSeven_STB_TC_42("650");
   }
 
-  // @Test(priority = 36) pass
+  @Test(priority = 36) //pass
   public void sendMoneyToMLBranchRatesValidationScenarioEight_STB_TC_43() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchRatesValidationScenarioEight_STB_TC_43("800");
   }
 
-  //@Test(priority = 37)
+  @Test(priority = 37)
   public void sendMoneyToMLBranchRatesValidationScenarioNine_STB_TC_44() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchRatesValidationScenarioNine_STB_TC_44("950");
   }
 
- // @Test(priority = 38) pass
+  @Test(priority = 38) //pass
   public void sendMoneyToMLBranchRatesValidationScenarioTen_STB_TC_45() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchRatesValidationScenarioTen_STB_TC_45("1300");
   }
 
-  //@Test(priority = 39) pass
+  @Test(priority = 39)// pass
   public void sendMoneyToMLBranchRatesValidationScenarioEleven_STB_TC_46() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchRatesValidationScenarioEleven_STB_TC_46("1800");
   }
 
-  //  @Test(priority = 40) pass
+  @Test(priority = 40) //pass
   public void sendMoneyToMLBranchRatesValidationScenarioTwelve_STB_TC_47() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchRatesValidationScenarioTwelve_STB_TC_47("2300");
   }
 
-   //  @Test(priority = 41)
+  @Test(priority = 41)
   public void sendMoneyToMLBranchRatesValidationScenarioThirteen_STB_TC_48() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchRatesValidationScenarioThirteen_STB_TC_48("25000");
   }
 
-     /* @Test(priority = 42)
-  public void sendMoneyToMLBranchLocationPopupValidation_STB_TC_50() throws Exception {
-      MLWalletBusinessLogic.sendMoneyToMLBranchLocationPopupValidation_STB_TC_50();
-  }
+     
 
-  @Test(priority = 43)
-  public void sendMoneyToMLBranchLocationDenyFunctionality_STB_TC_51() throws Exception {
-      MLWalletBusinessLogic.sendMoneyToMLBranchLocationDenyFunctionality_STB_TC_51();
-  }
-
-  @Test(priority = 44)
-  public void sendMoneyToMLBranchLocationPermissionDenyCloseBtnFunctionality_STB_TC_52() throws Exception {
-      MLWalletBusinessLogic.sendMoneyToMLBranchLocationPermissionDenyCloseBtnFunctionality_STB_TC_52();
-  }
-
-  @Test(priority = 45)
-  public void sendMoneyToMLBranchLocationPermissionDenyOpenSettingsBtnFunctionality_STB_TC_53() throws Exception {
-      MLWalletBusinessLogic.sendMoneyToMLBranchLocationPermissionDenyOpenSettingsBtnFunctionality_STB_TC_53();
-  }
-
-  @Test(priority = 46)
-  public void sendMoneyToMLBranchLocationPopUpAllowFunctionality_STB_TC_54() throws Exception {
-      MLWalletBusinessLogic.sendMoneyToMLBranchLocationPopUpAllowFunctionality_STB_TC_54();
-  }
-
-  @Test(priority = 47)
-  public void sendMoneyToMLBranchInternetInterruptionWhileEnteringOTP_STB_TC_55() throws Exception {
-      MLWalletBusinessLogic.sendMoneyToMLBranchInternetInterruptionWhileEnteringOTP_STB_TC_55();
-  }
-
-  @Test(priority = 48)
-  public void sendMoneyToMLBranchTransactionValidationAfterMinimizingApp_STB_TC_58() throws Exception {
-      MLWalletBusinessLogic.sendMoneyToMLBranchTransactionValidationAfterMinimizingApp_STB_TC_58();
-  }*/
-
- // @Test(priority = 49)  pending
+  @Test(priority = 42)  
   public void sendMoneyToMLBranchTransactionWithValidMLPin_STB_TC_65() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchTransactionWithValidMLPin_STB_TC_65();
   }
 
- // @Test(priority = 50) pending
+  @Test(priority = 43) 
   public void sendMoneyToMLBranchTransactionWithInValidMLPin_STB_TC_66() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLBranchTransactionWithInValidMLPin_STB_TC_66();
   } 
      
-   //  @Test(priority = 48) pass
+    @Test(priority = 44)// pass
      public void sendMoneyToMLBranchTransactionValidationAfterMinimizingApp_STB_TC_59() throws Exception {
          MLWalletBusinessLogic.sendMoneyToMLBranchTransactionValidationAfterMinimizingApp_STB_TC_59();
      }
      
      
-   //  @Test(priority = 51)
+     @Test(priority = 45)
      public void sendMoneyToMLBranchInOTPPopupValidation_STB_TC_72() throws Exception {
          MLWalletBusinessLogic.sendMoneyToMLBranchInOTPPopupValidation_STB_TC_72();
      }
 
-     /* @Test(priority = 52)
+     @Test(priority = 46)
      public void sendMoneyToMLBranchTransactionInAppOTPPopupUIValidation_STB_TC_73() throws Exception {
          MLWalletBusinessLogic.sendMoneyToMLBranchTransactionInAppOTPPopupUIValidation_STB_TC_73();
      }
 
-     @Test(priority = 53)
+     @Test(priority = 47)
      public void sendMoneyToMLBranchTransactionNewOTPAfterSixtySecondsValidation_STB_TC_74() throws Exception {
          MLWalletBusinessLogic.sendMoneyToMLBranchTransactionNewOTPAfterSixtySecondsValidation_STB_TC_74();
      }
 
-     @Test(priority = 54)
+     @Test(priority = 48)
      public void sendMoneyToMLBranchTransactionOTPCancelBtnFunctionality_STB_TC_75() throws Exception {
          MLWalletBusinessLogic.sendMoneyToMLBranchTransactionOTPCancelBtnFunctionality_STB_TC_75();
      }
 
-     @Test(priority = 55)
+     @Test(priority = 49)
      public void sendMoneyToMLBranchOTPContinueBtnFunctionality_STB_TC_76() throws Exception {
          MLWalletBusinessLogic.sendMoneyToMLBranchTransactionOTPContinueBtnFunctionality_STB_TC_76();
-     }*/
+     }
 
 
 }

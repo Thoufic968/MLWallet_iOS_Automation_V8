@@ -211,6 +211,8 @@ public class SendTransferPage {
     public static By objMaxLimitPopUp = By.xpath("//*[@name='The maximum Send Money per transaction set for your verification level is P50,000.00. Please try again.']");
     
     public static By objUpgradeNowBtn = By.xpath("(//*[@name='Upgrade Now'])[2]");
+    
+    public static By objInvalidPINMsg = By.xpath("//*[@name='You have entered an invalid PIN. Please try again.']");
 
 
 }

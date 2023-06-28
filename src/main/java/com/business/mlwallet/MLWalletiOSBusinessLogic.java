@@ -1633,7 +1633,6 @@ public class MLWalletiOSBusinessLogic extends Utilities {
 						String sExceptedMsg = "Are you sure you want to remove this saved recipient?";
 						assertionValidation(sDeleteConfirmationPopup, sExceptedMsg);
 						click(SendTransferPage.objRemoveBtn, getTextVal(SendTransferPage.objRemoveBtn, "Button"));
-						//clearField(SendTransferPage.objSearchRecipient, "Search Field");
 						waitTime(3000);
 						if (verifyElementNotPresent(SendTransferPage.objSelectLastName, 5)) {
 							logger.info("STB_TC_05, Saved Recipient from Saved Recipients page not got deleted Successfully");
@@ -2590,101 +2589,7 @@ public class MLWalletiOSBusinessLogic extends Utilities {
 					getDriver().resetApp();
 				}
 
-			/*	public void sendMoneyToMLBranchLocationPopupValidation_STB_TC_50() throws Exception {
-					HeaderChildNode("Send Money To ML Branch Location popup Validation");
-					sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
-					enterMLBranchDetails();
-					enterAmountToKwartaPadala("100");
-					if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
-						locationPopUpValidation();
-						logger.info("STB_TC_50, Send Money To ML Branch Location popup Validated");
-						extentLoggerPass("STB_TC_50", "STB_TC_50, Send Money To ML Branch Location popup Validated");
-						System.out.println("-----------------------------------------------------------");
-					}
-					
-				}
-
-				public void sendMoneyToMLBranchLocationDenyFunctionality_STB_TC_51() throws Exception {
-					HeaderChildNode("Send Money To ML Branch Location Deny Functionality Validation");
-					sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
-					enterMLBranchDetails();
-					enterAmountToKwartaPadala("100");
-					if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
-						permissionDenyPopUp();
-						logger.info("STB_TC_51, Send Money To ML Branch Location Deny Functionality Validated");
-						extentLoggerPass("STB_TC_51", "STB_TC_51, Send Money To ML Branch Location Deny Functionality Validated");
-						System.out.println("-----------------------------------------------------------");
-					}
-				}
-
-
-				public void sendMoneyToMLBranchLocationPermissionDenyCloseBtnFunctionality_STB_TC_52() throws Exception {
-					HeaderChildNode("Send Money To ML Branch Location Permission Deny Close Button Functionality Validation");
-					sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
-					enterMLBranchDetails();
-					enterAmountToKwartaPadala("100");
-					if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
-						permissionDenyCloseBtnFunctionality();
-						if(verifyElementPresent(SendTransferPage.objKwartaPadala,getTextVal(SendTransferPage.objKwartaPadala,"Page"))){
-							logger.info("STB_TC_52, Send Money To ML Branch Location Permission Deny Close Button Functionality Validated");
-							extentLoggerPass("STB_TC_52", "STB_TC_52, Send Money To ML Branch Location Permission Deny Close Button Functionality Validated");
-							System.out.println("-----------------------------------------------------------");
-						}
-					}
-				}
-
-				public void sendMoneyToMLBranchLocationPermissionDenyOpenSettingsBtnFunctionality_STB_TC_53() throws Exception {
-					HeaderChildNode("Send Money To ML Branch Location Permission Deny open Settings Button Functionality Validation");
-					sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
-					enterMLBranchDetails();
-					enterAmountToKwartaPadala("100");
-					if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
-						permissionDenyOpenSettingsBtnFunctionality();
-						if (verifyElementPresent(SendTransferPage.objAppInfo, getTextVal(SendTransferPage.objAppInfo, "Page"))) {
-							logger.info("STB_TC_53, Send Money To ML Branch Location Permission Deny Open Settings Button Functionality Validated");
-							extentLoggerPass("STB_TC_53", "STB_TC_53, Send Money To ML Branch Location Permission Deny Open Settings Button Functionality Validated");
-							System.out.println("-----------------------------------------------------------");
-						}
-					}
-				}
-
-
-				public void sendMoneyToMLBranchLocationPopUpAllowFunctionality_STB_TC_54() throws Exception {
-					HeaderChildNode("Send Money To ML Branch Location popup Allow Button Functionality Validation");
-					sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
-					enterMLBranchDetails();
-					enterAmountToKwartaPadala("100");
-					if (verifyElementPresent(MLWalletHomePage.objPopUpMsg, getTextVal(MLWalletHomePage.objPopUpMsg, "Popup Msg"))) {
-						locationPopUpAllowFunctionality();
-						if(verifyElementDisplayed(MLWalletLoginPage.objOneTimePin)) {
-							verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"));
-						}else if(verifyElementDisplayed(MLWalletLoginPage.objMLPin)) {
-							verifyElementPresent(MLWalletLoginPage.objMLPin,getTextVal(MLWalletLoginPage.objMLPin,"Page"));
-						}
-						logger.info("STB_TC_54, Send Money To ML Branch Location popup Allow Button Functionality Validated");
-						extentLoggerPass("STB_TC_54", "STB_TC_54, Send Money To ML Branch Location popup Allow Button Functionality Validated");
-						System.out.println("-----------------------------------------------------------");
-					}
-				}
-
-
-
-				public void sendMoneyToMLBranchInternetInterruptionWhileEnteringOTP_STB_TC_55() throws Exception {
-					HeaderChildNode("Send Money To ML Branch Internet Interruption While Entering OTP Validation");
-					sendMoneyToAnyMLBranch(prop.getproperty("Branch_Verified"));
-					enterMLBranchDetails();
-					enterAmountToKwartaPadala("100");
-					enableLocation_PopUp();
-					waitTime(15000);
-					setWifiConnectionToONOFF("OFF");
-					enterOTP(prop.getproperty("Valid_OTP"));
-					if(verifyElementPresent(MLWalletHomePage.objInternetConnectionPopUp, getTextVal(MLWalletHomePage.objInternetConnectionPopUp, "PopUp"))){
-						internetConnectionError();
-						logger.info("STB_TC_55, Send Money To ML Branch Internet Interruption While Entering OTP Validated");
-						extentLoggerPass("STB_TC_55", "STB_TC_55, Send Money To ML Branch Internet Interruption While Entering OTP Validated");
-						System.out.println("-----------------------------------------------------------");
-					}
-				}*/
+			
 
 				public void sendMoneyToMLBranchTransactionValidationAfterMinimizingApp_STB_TC_59() throws Exception {
 					HeaderChildNode("Send Money To ML Branch Transaction Validation After Minimizing App");
@@ -2748,6 +2653,10 @@ public class MLWalletiOSBusinessLogic extends Utilities {
 
 				public void sendMoneyToMLBranchTransactionWithInValidMLPin_STB_TC_66() throws Exception {
 					HeaderChildNode("Send Money to any ML Branch Transaction With Invalid ML Pin");
+					waitTime(2000);
+					changeNumberPage();
+					clearField();
+					waitTime(3000);
 					sendMoneyToAnyMLBranch("9999999999");
 					enterMLBranchDetails();
 					enterAmountToKwartaPadala("100");
@@ -3903,6 +3812,63 @@ public class MLWalletiOSBusinessLogic extends Utilities {
 					}
 					
 					
+					public void sendMoneyToMLWalletTransactionWithValidMLPin_STW_TC_57() throws Exception {
+						HeaderChildNode("Send Money to any ML Wallet Transaction With Valid ML Pin");
+						waitTime(2000);
+						changeNumberPage();
+						clearField();
+						sendMoneyMLWallet(prop.getproperty("Fully_verified"));
+						enterMobileNumberMLWallet(prop.getproperty("Branch_Verified"));
+						enterAmountAndSendToMLWallet("10");
+						handleMpin("1111", "Entered Mpin");
+						waitTime(3000);
+						if (verifyElementPresent(SendTransferPage.objSendMoneyMLWallet, getTextVal(SendTransferPage.objSendMoneyMLWallet, "Message"))) {
+							verifyElementPresent(SendTransferPage.objSendMoneyMLWalletPHP, getTextVal(SendTransferPage.objSendMoneyMLWalletPHP, "Amount"));
+							verifyElementPresent(SendTransferPage.objSendMoneyMLWalletDate, getTextVal(SendTransferPage.objSendMoneyMLWalletDate, "Date"));
+							verifyElementPresent(SendTransferPage.objMLWalletReferenceNumber, getTextVal(SendTransferPage.objMLWalletReferenceNumber, "Reference Number"));
+							String sReferenceNumber = getText(SendTransferPage.objMLWalletReferenceNumber);
+							System.out.println(sReferenceNumber);
+							Swipe("UP", 2);
+							click(SendTransferPage.objBackToHomeBtn, getTextVal(SendTransferPage.objBackToHomeBtn, "Button"));
+							Thread.sleep(3000);
+							Swipe("DOWN", 2);
+							Swipe("UP", 1);
+							verifyElementPresent(MLWalletHomePage.objRecentTransactions, getTextVal(MLWalletHomePage.objRecentTransactions, "Text"));
+							verifyElementPresent(MLWalletHomePage.objWalletToWallet, getTextVal(MLWalletHomePage.objWalletToWallet, "Text"));
+							click(MLWalletHomePage.objWalletToWallet, getTextVal(MLWalletHomePage.objWalletToWallet, "Text"));
+							if (verifyElementPresent(SendTransferPage.objReferenceNumberInTransactionDetails, getTextVal(SendTransferPage.objReferenceNumberInTransactionDetails, "Page"))) {
+								String sReferenceNumberInWalletToWallet = getText(SendTransferPage.objReferenceNumberInTransactionDetails);
+								System.out.println(sReferenceNumberInWalletToWallet);
+								assertionValidation(sReferenceNumberInWalletToWallet, sReferenceNumber);
+								logger.info("STW_TC_56, Send Money to any ML Wallet Transaction With Valid ML Pin validated");
+								extentLoggerPass("STW_TC_56", "STW_TC_56, Send Money to any ML Wallet Transaction With Valid ML Pin validated");
+								System.out.println("-----------------------------------------------------------");
+							}
+						}
+						getDriver().resetApp();
+					}
+
+					public void sendMoneyToMLWalletTransactionWithInValidMLPin_STW_TC_58() throws Exception {
+						HeaderChildNode("Send Money to any ML Wallet Transaction With Invalid ML Pin");
+						waitTime(2000);
+						changeNumberPage();
+						clearField();
+						sendMoneyMLWallet(prop.getproperty("Fully_verified"));
+						enterMobileNumberMLWallet(prop.getproperty("Branch_Verified"));
+						enterAmountAndSendToMLWallet("10");
+	                    waitTime(3000);
+						handleMpin("1234", "Entered Mpin");
+						if (verifyElementPresent(SendTransferPage.objInvalidPINMsg, getTextVal(SendTransferPage.objInvalidPINMsg, "Message"))) {
+							String sActualErrorMsg = getText(SendTransferPage.objInvalidPINMsg);
+							String sExceptedErrorMsg = "You have entered an invalid PIN. Please try again.";
+							assertionValidation(sActualErrorMsg,sExceptedErrorMsg);
+							logger.info("STW_TC_57, Send Money to any ML Wallet Transaction With Invalid ML Pin validated");
+							extentLoggerPass("STW_TC_57", "STW_TC_57, Send Money to any ML Wallet Transaction With Invalid ML Pin validated");
+							System.out.println("-----------------------------------------------------------");
+						}
+						getDriver().resetApp();
+					}
+					
 					
 					//=========================================== Cash In Via Bank ================================================//
 					//======================= Generalized methods for Cash In Via Bank ===========================================//
@@ -4397,6 +4363,28 @@ public class MLWalletiOSBusinessLogic extends Utilities {
 						backArrowBtn(3);
 						mlWalletLogout();
 					}
+					
+					
+					public void cashInViaBankTappingOutsideTheDragonPayPopupValidation_CIBA_TC_22() throws Exception {
+						HeaderChildNode("Cash In Via Bank Tapping Outside the Dragon Pay Popup Validation");
+						waitTime(2000);
+						changeNumberPage();
+						clearField();
+						mlWalletLogin(prop.getproperty("Branch_Verified"));
+						selectBankAndInputAmount("100");
+						verifyElementPresent(MLWalletCashInBank.objDragonPayChargesMsg, getTextVal(MLWalletCashInBank.objDragonPayChargesMsg, "Message"));
+						String sDragonPayChargesMsg = getText(MLWalletCashInBank.objDragonPayChargesMsg);
+						String sExpectedDragonPayChargesMsg = "Dragon Pay charges a fee of 30 pesos for this transaction. Do you wish to continue with your transaction?";
+						assertionValidation(sDragonPayChargesMsg, sExpectedDragonPayChargesMsg);
+						tapUsingCoordinates(500,1000);
+						logger.info("Clicked OutSide the Dragon Pay Popup");
+						if (verifyElementPresent(MLWalletCashInBank.objDragonPayChargesMsg, getTextVal(MLWalletCashInBank.objDragonPayChargesMsg, "Popup Message"))) {
+							logger.info("CIBA_TC_22, Cash In Via Bank, After Tapping Outside the Dragon Pay Popup, Popup doesn't closed");
+							extentLoggerPass("CIBA_TC_22", "CIBA_TC_22, Cash In Via Bank, After Tapping Outside the Dragon Pay Popup, Popup doesn't closed");
+							System.out.println("-----------------------------------------------------------");
+						}
+						getDriver().resetApp();
+					}
 
 					public void cashInViaBankBuyerTierLevel_CIBA_TC_24() throws Exception {
 						HeaderChildNode("Cash In Via Bank Buyer Tier Level");
@@ -4511,6 +4499,95 @@ public class MLWalletiOSBusinessLogic extends Utilities {
 						}
 						backArrowBtn(3);
 						mlWalletLogout1();
+					}
+					
+					
+
+					public void cashInViaBankAmountFieldValidation_CIBA_TC_49() throws Exception {
+						HeaderChildNode("Cash In Via Bank, Amount Field with more than 2 decimals Validation");
+						waitTime(2000);
+						changeNumberPage();
+						clearField();
+						mlWalletLogin(prop.getproperty("Branch_Verified"));
+						selectBankAndInputAmount("1000.123");
+						waitTime(2000);
+						if (verifyElementPresent(MLWalletCashInBank.objInvalidDecimalAmountMsg, getTextVal(MLWalletCashInBank.objInvalidDecimalAmountMsg, "Pop Message"))) {
+							String sMinimumTransactionPopupMsg = getText(MLWalletCashInBank.objInvalidDecimalAmountMsg);
+							String sExpectedPopupMsg = "The amount must be limited to 2 decimal places";
+							assertionValidation(sMinimumTransactionPopupMsg, sExpectedPopupMsg);
+							logger.info("CIBA_TC_49, Cash In Via Bank, Amount Field with more than 2 decimals Error Msg validated");
+							extentLoggerPass("CIBA_TC_49", "CIBA_TC_49, Cash In Via Bank, Amount Field with more than 2 decimals Error Msg validated");
+							System.out.println("-----------------------------------------------------------");
+						}
+						getDriver().resetApp();
+					}
+
+					public void cashInViaBankTransactionWithValidMLPin_CIBA_TC_50() throws Exception {
+						HeaderChildNode("Cash In Via Bank Transaction With Valid ML Pin");
+						waitTime(2000);
+						changeNumberPage();
+						clearField();
+						mlWalletLogin(prop.getproperty("Branch_Verified"));
+						selectBankAndInputAmount("100");
+						dragonPayChargesMsgValidation();
+						reviewTransactionValidation();
+						handleMpin("1111", "Entered MPIN");
+						bankUserLogin(prop.getproperty("Valid_LoginId"), prop.getproperty("Valid_Password"));
+						click(MLWalletCashInBank.objWebContinueBtn, "Continue Button");
+						click(MLWalletCashInBank.objPayBtn, getTextVal(MLWalletCashInBank.objPayBtn, "Button"));
+						verifyElementPresent(MLWalletCashInBank.objBankReferenceNumber, getTextVal(MLWalletCashInBank.objBankReferenceNumber, "Reference Number"));
+						verifyElementPresent(MLWalletCashInBank.objStatus, getTextVal(MLWalletCashInBank.objStatus, "Status"));
+						verifyElementPresent(MLWalletCashInBank.objMessage, getTextVal(MLWalletCashInBank.objMessage, "Message"));
+						waitTime(3000);
+						if (verifyElementPresent(MLWalletCashInBank.objSuccessMsg, getTextVal(MLWalletCashInBank.objSuccessMsg, "Message"))) {
+							logger.info("CIBA_TC_50, Cash In Via Bank Transaction With Valid ML Pin validated");
+							extentLoggerPass("CIBA_TC_50", "CIBA_TC_50, Cash In Via Bank Transaction With Valid ML Pin validated");
+							System.out.println("-----------------------------------------------------------");
+						}
+						getDriver().resetApp();
+					}
+
+
+					public void cashInViaBankTransactionWithInValidMLPin_CIBA_TC_51() throws Exception {
+						HeaderChildNode("Cash In Via Bank Transaction With Invalid ML Pin");
+						waitTime(2000);
+						changeNumberPage();
+						clearField();
+						mlWalletLogin(prop.getproperty("Branch_Verified"));
+						selectBankAndInputAmount("100");
+						dragonPayChargesMsgValidation();
+						reviewTransactionValidation();
+						handleMpin("1234", "Entered MPIN");
+						waitTime(2000);
+						if (verifyElementPresent(MLWalletCashInBank.objInvalidPINMsg, getTextVal(MLWalletCashInBank.objInvalidPINMsg, "Message"))) {
+							String sActualErrorMsg = getText(MLWalletCashInBank.objInvalidPINMsg);
+							String sExceptedErrorMsg = "You have entered an invalid PIN. Please try again.";
+							assertionValidation(sActualErrorMsg,sExceptedErrorMsg);
+							logger.info("CIBA_TC_51, Cash In Via Bank Transaction With Invalid ML Pin validated");
+							extentLoggerPass("CIBA_TC_51", "CIBA_TC_51, Cash In Via Bank Transaction With Invalid ML Pin validated");
+							System.out.println("-----------------------------------------------------------");
+						}
+						getDriver().resetApp();
+					}
+
+
+					public void cashInViaBankOTPPopupValidation_CIBA_TC_57() throws Exception {
+						HeaderChildNode("Cash In Via Bank OTP Popup validation");
+						waitTime(2000);
+						changeNumberPage();
+						clearField();
+						mlWalletLogin(prop.getproperty("Branch_Verified"));
+						selectBankAndInputAmount("100");
+						dragonPayChargesMsgValidation();
+						reviewTransactionValidation();
+						waitTime(3000);
+						if (verifyElementPresent(MLWalletLoginPage.objOneTimePin, getTextVal(MLWalletLoginPage.objOneTimePin, "Page"))) {
+							verifyElementPresent(MLWalletLoginPage.objOTP,getTextVal(MLWalletLoginPage.objOTP,"One Time Pin"));
+							logger.info("CIBA_TC_57, Cash In Via Bank, OTP popup validated");
+							extentLoggerPass("CIBA_TC_57", "CIBA_TC_57, Cash In Via Bank, OTP popup validated");
+							System.out.println("-----------------------------------------------------------");
+						}
+						getDriver().resetApp();
 					}
 		
 
@@ -7705,6 +7782,68 @@ public class MLWalletiOSBusinessLogic extends Utilities {
 								}
 							}  */
 
+							
+							public void buyELoadTransactionWithValidMLPin_BE_TC_73(String sTier,int promotab) throws Exception {
+								HeaderChildNode("Buy ELoad Transaction With Valid MLPin");
+								waitTime(2000);
+								changeNumberPage();
+								clearField();
+								eLoad_generic(sTier,prop.getproperty("sunMobileNumber"), "true", promotab);
+								enableLocation_PopUp();
+								verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
+								click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
+								waitTime(5000);
+								click(MLWalletEloadPage.objTransaction, getTextVal(MLWalletEloadPage.objTransaction, "Promo"));
+								verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
+								waitTime(5000);
+								click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+								verifyElementPresent(MLWalletEloadPage.objBuyLoad,getTextVal(MLWalletEloadPage.objBuyLoad,"Page"));
+								click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+								handleMpin("1111", "Entered Mpin");
+								waitTime(30000);
+								if(verifyElementPresent(MLWalletEloadPage.objTransactionDetailsPage,getTextVal(MLWalletEloadPage.objTransactionDetailsPage,"Page"))){
+									verifyElementPresent(MLWalletEloadPage.objMobileNumberInTransactionDetails,getTextVal(MLWalletEloadPage.objMobileNumberInTransactionDetails,"Mobile Number"));
+									verifyElementPresent(MLWalletEloadPage.objBuyELoadTime,getTextVal(MLWalletEloadPage.objBuyELoadTime,"Date and Time"));
+									verifyElementPresent(MLWalletEloadPage.objTypeOfPromoUsed, getTextVal(MLWalletEloadPage.objTypeOfPromoUsed, "Promo"));
+									verifyElementPresent(MLWalletEloadPage.objAmountToSend, getTextVal(MLWalletEloadPage.objAmountToSend, "Amount to Send"));
+									verifyElementPresent(MLWalletEloadPage.objServiceFee, getTextVal(MLWalletEloadPage.objServiceFee, "Service Fee"));
+									verifyElementPresent(MLWalletEloadPage.objTotalAmount, getTextVal(MLWalletEloadPage.objTotalAmount, "Total Amount"));
+									logger.info("BE_TC_78, Buy ELoad Transaction With Valid MLPin is Validated");
+									extentLoggerPass("BE_TC_78", "BE_TC_78, Buy ELoad Transaction With Valid MLPin is Validated");
+									System.out.println("-----------------------------------------------------------");
+								}
+								getDriver().resetApp();
+							}
+
+
+							public void buyELoadTransactionWithInValidMLPin_BE_TC_74(String sTier,int promotab) throws Exception {
+								HeaderChildNode("Buy ELoad Transaction With InValid MLPin");
+								waitTime(2000);
+								changeNumberPage();
+								clearField();
+								eLoad_generic(sTier, prop.getproperty("sunMobileNumber"), "true", promotab);
+								enableLocation_PopUp();
+								verifyElementPresent(MLWalletEloadPage.objLoadSelectionPage, "Load Selection Page");
+								click(MLWalletEloadPage.objPromoLoadTab, "Promo Load Tab");
+								waitTime(5000);
+								click(MLWalletEloadPage.objTransaction, getTextVal(MLWalletEloadPage.objTransaction, "Promo"));
+								verifyElementPresent(MLWalletEloadPage.objContinuePromoPopUp, getTextVal(MLWalletEloadPage.objContinuePromoPopUp, "Pop Up"));
+								waitTime(5000);
+								click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+								verifyElementPresent(MLWalletEloadPage.objBuyLoad, getTextVal(MLWalletEloadPage.objBuyLoad, "Page"));
+								click(MLWalletEloadPage.objConfirmBtn, "Confirm Button");
+								handleMpin("1234", "Entered Mpin");
+								waitTime(3000);
+								if (verifyElementPresent(MLWalletEloadPage.objInvalidPINMsg, getTextVal(MLWalletEloadPage.objInvalidPINMsg, "Message"))) {
+									String sActualErrorMsg = getText(MLWalletEloadPage.objInvalidPINMsg);
+									String sExceptedErrorMsg = "You have entered an invalid PIN. Please try again.";
+									assertionValidation(sActualErrorMsg,sExceptedErrorMsg);
+									logger.info("BE_TC_79, Buy ELoad Transaction With Invalid ML Pin validated");
+									extentLoggerPass("BE_TC_79", "BE_TC_79, Buy ELoad Transaction With Invalid ML Pin validated");
+									System.out.println("-----------------------------------------------------------");
+								}
+								getDriver().resetApp();
+							}
 							
 							//==================================== Registration =====================================================//
 

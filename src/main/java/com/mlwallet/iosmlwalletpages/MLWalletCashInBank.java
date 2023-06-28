@@ -74,6 +74,8 @@ public class MLWalletCashInBank {
     
     public static By objInvalidAmountMsg = By.xpath("//*[@name='The amount should not be less than 1']");
     
+    public static By objInvalidDecimalAmountMsg = By.xpath("//*[@name='The amount must be limited to 2 decimal places']");
+    
     public static By objCashInOption = By.xpath("//*[@label='Cash In options']");
     
     public static By objBranchName = By.xpath("(//*[@label='ML Branch '])[2]");
@@ -106,6 +108,7 @@ public class MLWalletCashInBank {
    
     public static By objCashInTransaction = By.xpath("(//*[@name='Recent Transactions']/parent::XCUIElementTypeOther/descendant::XCUIElementTypeOther)[5]");
    
+    public static By objInvalidPINMsg = By.xpath("//*[@name='You have entered an invalid PIN. Please try again.']");
     
 
 

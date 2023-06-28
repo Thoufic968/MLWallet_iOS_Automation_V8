@@ -1,5 +1,6 @@
 package com.mlwallet.ios_scripts;
 
+import org.testng.annotations.Test;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -19,50 +20,50 @@ public class MLWalletSendTransferToMLWalletUserScripts {
 	
 	//===========================================================================================================//
 
- // @Test(priority = 1) pass
+  @Test(priority = 1)// pass
   public void sendToMLWalletUser_STW_TC_01() throws Exception
   {
       MLWalletBusinessLogic.sendToMLWalletUser_STW_TC_01();
   }
 
 
-  //@Test(priority = 2) pass
+  @Test(priority = 2) //pass
   public void sendMoneyAddToFavorites_STW_TC_12() throws Exception {
       MLWalletBusinessLogic.sendMoneyAddToFavorites_STW_TC_12();
   }
 
-  //@Test(priority = 3) pass
+  @Test(priority = 3) //pass
   public void sendMoneyMLWalletToExistingReceiver_STW_TC_02() throws Exception
   {
       MLWalletBusinessLogic.sendMoneyMLWalletToExistingReceiver_STW_TC_02();
   }
 
- // @Test(priority = 4) pass
+  @Test(priority = 4) //pass
   public void sendToMLWalletInvalidMobNumber_STW_TC_03() throws Exception
   {
       MLWalletBusinessLogic.sendToMLWalletInvalidMobNumber_STW_TC_03();
   }
 
 
-  //  @Test(priority = 5) pass
+  @Test(priority = 5) // pass
   public void sendToMLWalletUnRegisteredNumber_STW_TC_04() throws Exception
   {
       MLWalletBusinessLogic.sendToMLWalletUnRegisteredNumber_STW_TC_04();
   }
 
-  //   @Test(priority = 6) pass
+  @Test(priority = 6) //pass
   public void sendToMLWalletInvalidAmount_STW_TC_05() throws Exception
   {
       MLWalletBusinessLogic.sendToMLWalletInvalidAmount_STW_TC_05("0");
   }
 
- // @Test(priority = 7)  pass
+  @Test(priority = 7)  //pass
   public void sendToMLWalletInsufficientAmount_STW_TC_06() throws Exception
   {
       MLWalletBusinessLogic.sendToMLWalletInsufficientAmount_STW_TC_06();
   }
 
- // @Test(priority = 8) pass
+  @Test(priority = 8) //pass
   public void sendMoneyMLWalletMaximumAmount_STW_TC_07() throws Exception
   {
       MLWalletBusinessLogic.sendMoneyMLWalletMaximumAmount_STW_TC_07();
@@ -72,105 +73,105 @@ public class MLWalletSendTransferToMLWalletUserScripts {
 
 //================================================================================================//
 
- // @Test(priority = 9) //pass
+  @Test(priority = 9) //pass
   public void sendMoneyDeleteFromFavorites_STW_TC_09() throws Exception
   {
       MLWalletBusinessLogic.sendMoneyDeleteFromFavorites_STW_TC_09();
   }
 
-  // @Test(priority = 10) //pass
+  @Test(priority = 10) //pass
   public void sendMoneyMLWalletUIValidation_STW_TC_10() throws Exception {
       MLWalletBusinessLogic.sendMoneyMLWalletUIValidation_STW_TC_10();
   }
 
- // @Test(priority = 11) pass
+  @Test(priority = 11)// pass
   public void sendMoneyFavoritesUIValidation_STW_TC_11() throws Exception {
       MLWalletBusinessLogic.sendMoneyFavoritesUIValidation_STW_TC_11();
   }
 
-  //@Test(priority = 12) pass
+  @Test(priority = 12) //pass
   public void sendMoneyMLWalletCancelTransaction_STW_TC_13() throws Exception {
       MLWalletBusinessLogic.sendMoneyMLWalletCancelTransaction_STW_TC_13("100");
   }
 
-   //@Test(priority = 13) pass
+  @Test(priority = 13)// pass
   public void sendMoneyMLWalletSearchUnFavoriteUser_STW_TC_14() throws Exception {
       MLWalletBusinessLogic.sendMoneyMLWalletSearchUnFavoriteUser_STW_TC_14();
   }
 
-  // @Test(priority = 14) pass
+  @Test(priority = 14)// pass
   public void sendMoneyMLWalletSearchFavoriteUser_STW_TC_15() throws Exception {
       MLWalletBusinessLogic.sendMoneyMLWalletSearchFavoriteUser_STW_TC_15();
   }
 
-   // @Test(priority = 15) pass
+  @Test(priority = 15)// pass
   public void SendMoneyMLWalletSuccessPageUIValidation_STW_TC_16() throws Exception {
       MLWalletBusinessLogic.sendMoneyMLWalletSuccessPageUIValidation_STW_TC_16();
   }
 
-   //  @Test(priority = 16) pass
+  @Test(priority = 16) //pass
   public void sendMoneyMLWalletOTPPageUIValidation_STW_TC_17() throws Exception {
       MLWalletBusinessLogic.sendMoneyMLWalletOTPPageUIValidation_STW_TC_17();
   }
 
-   //   @Test(priority = 17) pass
+  @Test(priority = 17)// pass
   public void sendMoneyMLWalletConfirmDetailsPageUIValidation_STW_TC_18() throws Exception {
       MLWalletBusinessLogic.sendMoneyMLWalletConfirmDetailsPageUIValidation_STW_TC_18("100");
   }
 
- // @Test(priority = 18) pass
+  @Test(priority = 18) //pass
   public void sendMoneyToMlWalletEnterAmountPageUIValidation_STW_TC_19() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMlWalletEnterAmountPageUIValidation_STW_TC_19();
   }
 
-  //@Test(priority = 19) pass
+  @Test(priority = 19) //pass
   public void sendMoneyToMLWalletPageUIValidation_STW_TC_20() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLWalletPageUIValidation_STW_TC_20();
   }
 
-  //@Test(priority = 20) pass
+  @Test(priority = 20) ///pass
   public void sendMoneyMlWalletTransactionDetailsUIValidation_STW_TC_21() throws Exception {
       MLWalletBusinessLogic.sendMoneyMlWalletTransactionDetailsUIValidation_STW_TC_21();
   } 
   
 //===========
- // @Test(priority = 21) pass
+  @Test(priority = 21) ///pass
   public void sendMoneyMLWalletBuyerTierAccountUser_STW_TC_22() throws Exception {
       MLWalletBusinessLogic.sendMoneyMLWalletBuyerTierAccountUser_STW_TC_22();
   }
 
   
-  //@Test(priority = 22) pass
+  @Test(priority = 22)/// pass
   public void sendMoneyMLWalletSemiVerifiedAccountUser_STW_TC_23() throws Exception {
       MLWalletBusinessLogic.sendMoneyMLWalletSemiVerifiedAccountUser_STW_TC_23();
   }
 
-  //@Test(priority = 23) pass
+  @Test(priority = 23) //pass
   public void sendMoneyMLWalletBranchVerifiedAccountUser_STW_TC_24() throws Exception {
       MLWalletBusinessLogic.sendMoneyMLWalletBranchVerifiedAccountUser_STW_TC_24();
   }
 
-  //@Test(priority = 24) pass
+  @Test(priority = 24) //pass
   public void sendMoneyMLWalletFullyVerifiedAccountUser_STW_TC_25() throws Exception {
       MLWalletBusinessLogic.sendMoneyMLWalletFullyVerifiedAccountUser_STW_TC_25();
   }
 
- // @Test(priority = 25) pass
+  @Test(priority = 25)// pass
   public void sendMoneyMlWalletSemiVerifiedAccountMaxLimit_STW_TC_26() throws Exception {
       MLWalletBusinessLogic.sendMoneyMLWalletSemiVerifiedAccountMaxLimit_STW_TC_26();
   }
 
-//  @Test(priority = 26) pass
+  @Test(priority = 26) //pass
   public void sendMoneyMlWalletBranchVerifiedAccountMaxLimit_STW_TC_29() throws Exception {
       MLWalletBusinessLogic.sendMoneyMLWalletBranchVerifiedAccountMaxLimit_STW_TC_29();
   }
 
- // @Test(priority = 27) pass
+  @Test(priority = 27) //pass
   public void sendMoneyMLWalletFullyVerifiedAccountMaxLimit_STW_TC_32() throws Exception {
       MLWalletBusinessLogic.sendMoneyMLWalletFullyVerifiedAccountMaxLimit_STW_TC_32();
   }
 
- // @Test(priority = 28) pass
+  @Test(priority = 28) //pass
   public void sendMoneyToMLWalletSuccessMsgValidation_STW_TC_35() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLWalletSuccessMsgValidation_STW_TC_35();
   }
@@ -185,7 +186,7 @@ public class MLWalletSendTransferToMLWalletUserScripts {
       MLWalletBusinessLogic.sendMoneyToMLWalletMaxTransactionReceivingLimitBranchVerifiedTier_STW_TC_38("50000");
   }
 
-  @Test(priority = 31)
+    @Test(priority = 31)
   public void sendMoneyToMLWalletMaxTransactionReceivingLimitFullyVerifiedTier_STW_TC_40() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLWalletMaxTransactionReceivingLimitFullyVerifiedTier_STW_TC_40("50000");
   }
@@ -222,6 +223,16 @@ public class MLWalletSendTransferToMLWalletUserScripts {
   @Test(priority = 41)
   public void sendMoneyToMLWalletTransactionValidationAfterMinimizingApp_STW_TC_51() throws Exception {
       MLWalletBusinessLogic.sendMoneyToMLWalletTransactionValidationAfterMinimizingApp_STW_TC_51();
+  }
+  
+  @Test(priority = 42)
+  public void sendMoneyToMLWalletTransactionWithValidMLPin_STW_TC_57() throws Exception {
+      MLWalletBusinessLogic.sendMoneyToMLWalletTransactionWithValidMLPin_STW_TC_57();
+  }
+
+  @Test(priority = 43)
+  public void sendMoneyToMLWalletTransactionWithInValidMLPin_STW_TC_58() throws Exception {
+     MLWalletBusinessLogic.sendMoneyToMLWalletTransactionWithInValidMLPin_STW_TC_58();
   }
 
 }

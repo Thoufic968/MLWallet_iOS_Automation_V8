@@ -1,6 +1,7 @@
 package com.mlwallet.ios_scripts;
 
 
+import org.testng.annotations.Test;
 import com.business.mlwallet.MLWalletiOSBusinessLogic;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
@@ -29,12 +30,12 @@ public class MLWalletRegressionPayBillsScripts {
         MLWalletBusinessLogic.billerCategories_PB_TC_02();
     }
 
-   // @Test(priority = 3) developed recently
+    @Test(priority = 3)// developed recently
     public void billersInAlphabeticalOrder_PB_TC_03() throws Exception {
         MLWalletBusinessLogic.billersInAlphabeticalOrder_PB_TC_03();
     }
 
-    //@Test(priority = 4) pending
+    @Test(priority = 4) //pending
     public void selectBiller_PB_TC_04() throws Exception {
         MLWalletBusinessLogic.selectBiller_PB_TC_04();
     }

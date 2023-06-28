@@ -1,6 +1,7 @@
 package com.mlwallet.ios_scripts;
 
 
+import org.testng.annotations.Test;
 import com.business.mlwallet.MLWalletiOSBusinessLogic;
 import com.propertyfilereader.PropertyFileReader;
 
@@ -238,6 +239,16 @@ public class MLWalletBuyEload {
 //        MLWalletBusinessLogic.buyELoadTransactionValidationAfterMinimizingApp_BE_TC_069(prop.getproperty("Branch_Verified"), 4);
 //    }
 
+    
+    @Test(priority = 43)
+    public void buyELoadTransactionWithValidMLPin_BE_TC_78() throws Exception {
+        MLWalletBusinessLogic.buyELoadTransactionWithValidMLPin_BE_TC_73(prop.getproperty("Fully_Verified"), 3);
+    }
+
+    @Test(priority = 44)
+    public void buyELoadTransactionWithInValidMLPin_BE_TC_79() throws Exception {
+        MLWalletBusinessLogic.buyELoadTransactionWithInValidMLPin_BE_TC_74(prop.getproperty("Fully_Verified"), 3);
+    }
 
 
 

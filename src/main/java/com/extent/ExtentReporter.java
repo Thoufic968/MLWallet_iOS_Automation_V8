@@ -278,12 +278,12 @@ public class ExtentReporter implements ITestListener  {
 			}
 
 		} finally {
-//			try {
-//				logger.info("::::::::::Relaunching The App::::::::::");
-//				ob.init();
-//			} catch (InterruptedException e) {
-//				e.printStackTrace();
-//			}
+			try {
+				logger.info("::::::::::Relaunching The App::::::::::");
+				ob.init();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 					
 		}
 //		mailBodyPart.add(result.getName()+","+ExcelUpdate.passCounter+","+ExcelUpdate.failCounter);

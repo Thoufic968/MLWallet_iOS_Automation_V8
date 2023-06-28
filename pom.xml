@@ -87,11 +87,13 @@
 			<version>3.1.0</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>6.9.10</version>
-		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.7.1</version>
+    <scope>test</scope>
+</dependency>
 
 		<dependency>
 			<groupId>log4j</groupId>
@@ -232,7 +234,7 @@
 			<groupId>com.applitools</groupId>
 			<artifactId>eyes-images-java3</artifactId>
 			<version>3.158.9</version>
-		</dependency>
+		</dependency> 
 
 		<dependency>
 			<groupId>com.epam.reportportal</groupId>
@@ -358,7 +360,18 @@
 <version>1.15</version>
 </dependency>
 
-	
+<dependency>
+        <groupId>org.htmlparser</groupId>
+        <artifactId>htmlparser</artifactId>
+        <version>1.6</version>
+        <exclusions>
+            <exclusion>
+                <artifactId>tools</artifactId>
+                <groupId>com.sun</groupId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+
 
 	</dependencies>
 	<build>

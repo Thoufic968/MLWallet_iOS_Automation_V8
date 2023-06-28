@@ -2,6 +2,7 @@ package com.mlwallet.ios_scripts;
 
 
 
+import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 

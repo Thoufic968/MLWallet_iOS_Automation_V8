@@ -1,5 +1,6 @@
 package com.mlwallet.ios_scripts;
 
+import org.testng.annotations.Test;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -108,6 +109,11 @@ public class MLWalletCashInViaBankScripts {
     @Test(priority = 17) 
     public void cancelButtonValidationInDragonPayPopUp_CIBA_TC_21() throws Exception {
         MLWalletBusinessLogic.cancelButtonValidationInDragonPayPopUp_CIBA_TC_21();
+    } 
+    
+    @Test(priority = 18)
+    public void cashInViaBankTappingOutsideTheDragonPayPopupValidation_CIBA_TC_22() throws Exception {
+        MLWalletBusinessLogic.cashInViaBankTappingOutsideTheDragonPayPopupValidation_CIBA_TC_22();
     }
 
     @Test(priority = 18) 
@@ -140,5 +146,26 @@ public class MLWalletCashInViaBankScripts {
     public void cashInViaBankDragonPayChagresPopUpValidation_CIBA_TC_32() throws Exception {
         MLWalletBusinessLogic.cashInViaBankDragonPayChagresPopUpValidation_CIBA_TC_32();
     }   
+    
+    @Test(priority = 32) 
+    public void cashInViaBankAmountFieldValidation_CIBA_TC_49() throws Exception {
+        MLWalletBusinessLogic.cashInViaBankAmountFieldValidation_CIBA_TC_49();
+    }
+
+    @Test(priority = 33) 
+    public void cashInViaBankTransactionWithValidMLPin_CIBA_TC_50() throws Exception {
+        MLWalletBusinessLogic.cashInViaBankTransactionWithValidMLPin_CIBA_TC_50();
+    }
+
+    @Test(priority = 34) 
+    public void cashInViaBankTransactionWithInValidMLPin_CIBA_TC_51() throws Exception {
+        MLWalletBusinessLogic.cashInViaBankTransactionWithInValidMLPin_CIBA_TC_51();
+    }
+
+    @Test(priority = 35) 
+    public void cashInViaBankOTPPopupValidation_CIBA_TC_57() throws Exception {
+        MLWalletBusinessLogic.cashInViaBankOTPPopupValidation_CIBA_TC_57();
+    } 
+    
 
 }

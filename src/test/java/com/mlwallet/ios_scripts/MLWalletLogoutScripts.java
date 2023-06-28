@@ -1,5 +1,6 @@
 package com.mlwallet.ios_scripts;
 
+import org.testng.annotations.Test;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import com.business.mlwallet.MLWalletiOSBusinessLogic;

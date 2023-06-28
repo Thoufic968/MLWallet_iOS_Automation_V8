@@ -1,5 +1,6 @@
 package com.mlwallet.ios_scripts;
 
+import org.testng.annotations.Test;
 import com.business.mlwallet.MLWalletiOSBusinessLogic;
 import com.gmail.GmailQuickstart;
 import com.utility.Utilities;

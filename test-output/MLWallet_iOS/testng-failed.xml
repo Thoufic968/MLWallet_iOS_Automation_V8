@@ -12,8 +12,35 @@
     <classes>
       <class name="com.mlwallet.ios_scripts.MLWalletCashInViaBranch">
         <methods>
-          <include name="cashInViaBranchTransactionWithInValidMLPin_CIBR_TC_44"/>
+          <include name="cashInViaBranchTappingOutsideTheCashInConfirmationPopUp_CIBR_TC_13"/>
+          <include name="cashInViaBranchTransactionWithValidMLPin_CIBR_TC_43"/>
+          <include name="cashInViaBranchTransactionNewOTPAfterSixtySecondsValidation_CIBR_TC_52"/>
+          <include name="cashInViaBranchNavigationToHomePageFromQRPage_CIBR_TC_08"/>
+          <include name="cashInViaBankTappingOutsideTheCancelTransactionConfirmationPopup_CIBR_TC_15"/>
+          <include name="cashInViaBranchFullyVerifiedTierUser_CIBR_TC_18"/>
+          <include name="cashInViaBranchMaxTransactionFullyVerifiedTierUser_CIBR_TC_21"/>
+          <include name="cashInViaBranchCancelBtnValidationOnCashInConfirmPopUp_CIBR_TC_12"/>
+          <include name="cashInViaBranchSemiVerifiedTierUser_CIBR_TC_17"/>
+          <include name="cashInViaBranchGoBackBtnValidationOnCashInConfirmPopUp_CIBR_TC_14"/>
+          <include name="cashInViaBranchTransactionInAppOTPPopupUIValidation_CIBR_TC_51"/>
+          <include name="cashInViaBRanchInvalidAmount_CIBR_TC_05"/>
+          <include name="cashInViaBranchMaxTransactionBuyerTierUser_CIBR_TC_19"/>
+          <include name="cashInViaBranchAmountFieldValidation_CIBR_TC_42"/>
+          <include name="cashInViaBranchOTPPopupValidation_CIBR_TC_50"/>
+          <include name="cashInViaBranchTransactionValidationAfterMinimizingApp_CIBR_TC_36"/>
+          <include name="cashInViaBranch_Maximum_Limit_Amount_CIBR_TC_04"/>
           <include name="init"/>
+          <include name="cashInViaBranchPendingTransaction_CIBR_TC_11"/>
+          <include name="cashInViaBranchTransactionPendingStatusValidation_CIBR_TC_23"/>
+          <include name="cashInviaBranch_ValidAmount_Scenario_CIBR_TC_01"/>
+          <include name="cashInViaBranchTransactionOTPCancelBtnFunctionality_CIBR_TC_53"/>
+          <include name="cashInViaBranchBuyerTierUser_CIBR_TC_16"/>
+          <include name="cashInViaBranchQRCodePageUIValidation_CIBR_TC_09"/>
+          <include name="cashInViaBranchTransactionWithInValidMLPin_CIBR_TC_44"/>
+          <include name="cashInViaBranchOTPContinueBtnFunctionality_CIBR_TC_54"/>
+          <include name="cashInViaBranchCancelTransactionScenario_CIBR_TC_02"/>
+          <include name="cashInviaBranch_Invalid_Amount_CIBR_TC_03"/>
+          <include name="cashInViaBranchTransactionDetailsUIValidation_CIBR_TC_22"/>
         </methods>
       </class> <!-- com.mlwallet.ios_scripts.MLWalletCashInViaBranch -->
     </classes>
