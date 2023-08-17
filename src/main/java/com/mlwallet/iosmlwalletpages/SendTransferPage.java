@@ -128,7 +128,7 @@ public class SendTransferPage {
     
     public static By objBackArrow1 =By.xpath("(//*[@name=''])[4]");
     
-    public static By objDeleteRecipient = By.xpath("//*[@name='Delete']");
+    public static By objDeleteRecipient = By.xpath("//*[@label='Delete']");
 
     public static By objEditRecipient = By.xpath("//*[@label='Edit']");
 
@@ -140,7 +140,7 @@ public class SendTransferPage {
 
     public static By objOkBtn = By.xpath("//*[@label='Ok']");
 
-    public static By objEditRecipientLastName = By.xpath("(//*[@text='Middle Name']/following-sibling::android.widget.EditText)[1]");
+    public static By objEditRecipientLastName = By.xpath("//XCUIElementTypeTextField[@name='QEWPD9']");
 
     public static By objFirstNameRequiredMsg = By.xpath("//*[@name='First name is required']");
 
@@ -210,7 +210,7 @@ public class SendTransferPage {
     
     public static By objMaxLimitPopUp = By.xpath("//*[@name='The maximum Send Money per transaction set for your verification level is P50,000.00. Please try again.']");
     
-    public static By objUpgradeNowBtn = By.xpath("(//*[@name='Upgrade Now'])[2]");
+    public static By objUpgradeNowBtn = By.xpath("(//*[@label='Upgrade Now'])[2]");
     
     public static By objInvalidPINMsg = By.xpath("//*[@name='You have entered an invalid PIN. Please try again.']");
 

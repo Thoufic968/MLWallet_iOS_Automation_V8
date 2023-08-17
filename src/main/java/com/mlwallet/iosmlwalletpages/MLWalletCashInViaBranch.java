@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class MLWalletCashInViaBranch {
 	
-	public static By objCashInMenu=By.xpath("//*[@name='FF293B']");
+	public static By objCashInMenu=By.xpath("(//*[@name='Cash In'])[2]");
 	
 	public static By objCashInPage=By.xpath("//*[@name='Cash In ' or @name='Cash In']");
 	
@@ -26,7 +26,7 @@ public class MLWalletCashInViaBranch {
 	
 	public static By objContinueButton=By.xpath("//*[@label='Continue']");
 	
-	public static By objPopUpContinueButton=By.xpath("//*[XCUIElementTypeOther]/child::XCUIElementTypeOther/descendant::XCUIElementTypeOther[@name='Continue']");
+	public static By objPopUpContinueButton=By.xpath("//*[XCUIElementTypeOther]/child::XCUIElementTypeOther/descendant::XCUIElementTypeOther[@label='Continue']");
 	
 	public static By objkptnId=By.xpath("//*[@resource-id='transaction-code']");
 	

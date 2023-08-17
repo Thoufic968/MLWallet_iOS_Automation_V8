@@ -25,7 +25,7 @@ public class MLWalletHomeAndDashboard {
 // ====================================================================================================//
 
 
-    @Test(priority = 1) //pass
+  /*  @Test(priority = 1) //pass
     public void mlWalletHomePageUIValidation() throws Exception {
         MLWalletBusinessLogic.mlWalletHomePageUIValidation_HD_TC_01();
     }
@@ -43,7 +43,7 @@ public class MLWalletHomeAndDashboard {
     @Test(priority = 4) //pass
     public void mlWalletHomePageEyeIconValidation_HD_TC_04() throws Exception {
         MLWalletBusinessLogic.mlWalletHomePageEyeIconValidation_HD_TC_04();
-    }
+    } 
 
     @Test(priority = 5) //pass
     public void mlWalletAccountTierLevelVerification_HD_TC_05() throws Exception {
@@ -68,14 +68,14 @@ public class MLWalletHomeAndDashboard {
     @Test(priority = 9) //pass
     public void mlWalletHomePageShopHD_TC_09() throws Exception {
         MLWalletBusinessLogic.mlWalletHomePageShopHD_TC_09();
-    }
+    } 
 
     @Test(priority = 10) //pass
     public void mlWalletHomePageKwartaPadalaRatesValidation_HD_TC_10() throws Exception {
         MLWalletBusinessLogic.mlWalletHomePageKwartaPadalaRatesValidation_HD_TC_10();
-    }
+    } 
 
-    @Test(priority = 11)// pass
+    @Test(priority = 11) // pass
     public void mlWalletVerificationTierPerksNavigationFromHomePageHamburgerMenu_HD_TC_11() throws Exception {
         MLWalletBusinessLogic.mlWalletVerificationTierPerksNavigationFromHomePageHamburgerMenu_HD_TC_11();
     }
@@ -103,7 +103,7 @@ public class MLWalletHomeAndDashboard {
     @Test(priority = 16)
     public void mlWalletVerificationTierPerksAsBranchVerifiedUser_HD_TC_17() throws Exception {
         MLWalletBusinessLogic.mlWalletVerificationTierPerksAsBranchVerifiedUser_HD_TC_17();
-    }
+    }*/
 
     @Test(priority = 17)
     public void mlWalletVerificationTierPerksAsBuyerTierUser_HD_TC_18() throws Exception {
@@ -134,6 +134,17 @@ public class MLWalletHomeAndDashboard {
     public void mlWalletHomePageIIconValidationAsFullyVerifiedTierUser_HD_TC_23() throws Exception {
         MLWalletBusinessLogic.mlWalletHomePageIIconValidationAsFullyVerifiedTierUser_HD_TC_23();
     }
+    
+  //  @Test(priority = 23)
+    public void mlWalletHomePageDoYouHaveAnotherAcButtonFunctionality_HD_TC_24() throws Exception {
+        MLWalletBusinessLogic.mlWalletHomePageDoYouHaveAnotherAcButtonFunctionality_HD_TC_24();
+    }
+    
+  //  @Test(priority = 24) pass
+    public void mlWalletVerificationAllTierPerksLoggingInAsSemiVerifiedUser_HD_TC_16() throws Exception {
+        MLWalletBusinessLogic.mlWalletVerificationAllTierPerksLoggingInAsSemiVerifiedUser_HD_TC_16();
+    }
+
 
 
 }

@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 public class MLWalletCashInBank {
 
-    public static By objCashIn = By.xpath("//*[@name='FF293B']");
+    public static By objCashIn = By.xpath("(//*[@name='Cash In'])[2]");
     
     public static By objCashInPage = By.xpath("//*[@name='Cash In']");
 
@@ -46,7 +46,7 @@ public class MLWalletCashInBank {
 
     public static By objReferenceNumberMsg = By.xpath("(//*[XCUIElementTypeOther]/following::XCUIElementTypeStaticText)[1]");
 
-    public static By objLoginIdTxtField = By.xpath("//*[@type ='XCUIElementTypeTextField']");
+    public static By objLoginIdTxtField = By.xpath("//*[@name='Login Id']/following::XCUIElementTypeTextField");////*[@type ='XCUIElementTypeTextField']
 
     public static By objPasswordTxtField = By.xpath("//*[@type ='XCUIElementTypeSecureTextField']");
 
@@ -54,9 +54,9 @@ public class MLWalletCashInBank {
 
     public static By objPayBtn = By.xpath("(//*[@name='Pay'])[2]");
 
-    public static By objBankReferenceNumber = By.xpath("//*[@name='Payment Gateway Result']/XCUIElementTypeOther[5]/XCUIElementTypeTextField");
+    public static By objBankReferenceNumber = By.xpath("//XCUIElementTypeOther[@name='Payment Gateway Result']/XCUIElementTypeOther[4]/XCUIElementTypeTextField");
 
-    public static By objStatus = By.xpath("//*[@name='Payment Gateway Result']/XCUIElementTypeOther[7]/XCUIElementTypeTextField");
+    public static By objStatus = By.xpath("//*[@name='Payment Gateway Result']/XCUIElementTypeOther[6]/XCUIElementTypeTextField");
 
     public static By objMessage = By.xpath("//*[XCUIElementTypeOther]/descendant::XCUIElementTypeTextView/child::XCUIElementTypeOther");
 
@@ -92,7 +92,7 @@ public class MLWalletCashInBank {
     
     public static By objReviewTransactionBackBtn = By.xpath("//*[@name='']");
     
-    public static By objWebContinueBtn = By.xpath("");
+    public static By objWebContinueBtn = By.xpath("//*[@name='Continue']");
     
     public static By objPendingStatus = By.xpath("(//*[@name='Recent Transactions']/parent::XCUIElementTypeOther/descendant::XCUIElementTypeOther)[5]");
     
@@ -102,7 +102,7 @@ public class MLWalletCashInBank {
     
     public static By objInvalidAmountMsg1 = By.xpath("//*[@name='Amount is required']");
     
-    public static By objMaxLimitTxt = By.xpath("(//*[XCUIElementTypeOther]/descendant::XCUIElementTypeOther/following-sibling::XCUIElementTypeStaticText)[2]");
+    public static By objMaxLimitTxt = By.xpath("//*[@name='Bank Cash-in is not allowed for customers at this verification level. Please upgrade your account to use this service.']");
     
     public static By objBankMaxLimitTxt = By.xpath("//*[@name='The maximum Bank Cash-in per transaction set for your verification level is P50,000.00. Please try again.']");
    
@@ -110,6 +110,17 @@ public class MLWalletCashInBank {
    
     public static By objInvalidPINMsg = By.xpath("//*[@name='You have entered an invalid PIN. Please try again.']");
     
+    public static By objSeconds = By.xpath("//*[@name='Did not receive OTP?']/following-sibling::XCUIElementTypeStaticText");
+    
+    public static By objPending = By.xpath("(//*[contains(@name,' Pending ')])");
+    
+    public static By objPendingVerification = By.xpath("(//*[@name='Recent Transactions']/following::XCUIElementTypeOther)[7]");
+    
+    public static By objTransactionHistoryBackBtn = By.xpath("//*[@name='']");
+    
+    public static By objAvailableBalance = By.xpath("//*[@label='Available Balance']");
+    
+    public static By objAnotherAccTxt = By.xpath("//*[@label='Do you have another account?']");
 
 
 }

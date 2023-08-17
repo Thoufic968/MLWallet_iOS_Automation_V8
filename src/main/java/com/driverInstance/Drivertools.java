@@ -71,7 +71,12 @@ public class Drivertools {
 //	public static ThreadLocal<AppiumDriver<MobileElement>> tlDriver = new ThreadLocal<>();
 
 	public static ThreadLocal<WebDriver> tlWebDriver = new ThreadLocal<>();
+	
+//	public static final ThreadLocal<WebDriver> tlWebDriver = new ThreadLocal<>();
 
+	//private static final ThreadLocal<WebDriver> threadSafeDriver = new ThreadLocal<>();
+
+	
 	public static Eyes eyes = new Eyes();
 
 	public static ExtentReporter extent = new ExtentReporter();
@@ -306,7 +311,7 @@ public class Drivertools {
 		
 		if(getTestName().equals("Android_UserSessionManagement")) {
 			setPlatfrom(Utilities.setPlatform);
-		}else if(methodName.equals("Login")) {
+		}else if(methodName.equals("Login")|| methodName.equals("useQRSendMoneyToAnyMLWalletUser_QR_TC_02")) {
 			setPlatfrom("Web");
 		}
 

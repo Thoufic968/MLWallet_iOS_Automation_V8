@@ -43,6 +43,8 @@ public class MLWalletEloadPage {
 	
 	public static By objConfirmBtn=By.xpath("//*[@label='Confirm']");
 	
+	public static By obJconfirmBtnTwo = By.xpath("(//*[@name='Confirm'])[2]");
+	
 	public static By objCancelBtn = By.xpath("//*[@label='Cancel']");
 	
 	public static By objOTPCancelBtn = By.xpath("(//*[@name='CANCEL'])[3]");
@@ -63,7 +65,7 @@ public class MLWalletEloadPage {
 	
 	public static By objErrorMsgOne=By.xpath("//*[@name='Mobile number is required']");
 	
-	public static By objInsufficientBalPopup=By.xpath("(//*[@resource-id='modal-confirm-button']/preceding-sibling::android.widget.TextView)[2]");
+	public static By objInsufficientBalPopup=By.xpath("//*[@name='There is insufficient balance to proceed with this transaction. Please try again.']");
 	
 	public static By objOkBtn=By.xpath("//*[@label='Ok']");
 	
@@ -75,9 +77,11 @@ public class MLWalletEloadPage {
 	
 	public static By objBuyELoadStatus = By.xpath("(//*[@name='Successfully bought load for']/following::XCUIElementTypeStaticText)[4]");
 
-	public static By objMaxLimitPopupMsg = By.xpath("//*[@resource-id='something']/following-sibling::android.widget.TextView");
-	public static By obj3000RegularLoad = By.xpath("(//*[@text='Smart Regular Load 3000'])[1]");
-	public static By obj2000RegularLoad = By.xpath("(//*[@text='Smart Regular Load 2000'])[1]");
+	public static By objMaxLimitPopupMsg = By.xpath("//*[@label='The maximum E-load per transaction set for your verification level is P2,000.00. Please try again.']");
+	
+	public static By obj3000RegularLoad = By.xpath("(//XCUIElementTypeStaticText[@name='Globe Regular Load 3000'])[1]");
+	
+	public static By obj2000RegularLoad = By.xpath("(//XCUIElementTypeStaticText[@name='Globe Regular Load 2000'])[1]");
 	
 	public static By objBuyLoad = By.xpath("//*[@name='Buy Load']");
 	
@@ -93,11 +97,15 @@ public class MLWalletEloadPage {
 	
 	public static By objContacts =By.xpath("(//*[@label='Contacts'])[2]");
 	
+	public static By objListOfContacts = By.xpath("//*[@name='Contacts Favorites']/following-sibling::XCUIElementTypeOther/child::XCUIElementTypeOther/descendant::XCUIElementTypeOther/child::XCUIElementTypeScrollView/child::XCUIElementTypeOther/descendant::XCUIElementTypeOther/child::XCUIElementTypeOther");
+	
 	public static By objFavorites =By.xpath("//*[@label='Favorites']");
 	
 	public static By objAllowBtn = By.xpath("//*[@label='Allow']");
 	
 	public static By objSearch = By.xpath("//*[@name='Search']/XCUIElementTypeTextField");
+	
+	public static By objSearchOne = By.xpath("//XCUIElementTypeTextField[@name='OO7ML4']");
 	
 	public static By objContactsBtn = By.xpath("(//*[@text='Contacts'])[2]");
 //	public static By objFavorites = By.xpath("//*[@text='Favorites']");
@@ -108,10 +116,34 @@ public class MLWalletEloadPage {
 	
 	public static By objInvalidPINMsg = By.xpath("//*[@name='You have entered an invalid PIN. Please try again.']");
 	
-	public static By objSearchedContactName = By.xpath("(((//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.widget.ScrollView' and ./parent::*[./parent::*[./parent::*[@class='android.widget.FrameLayout']]]]]/*[@class='android.view.ViewGroup'])[1]/*/*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']])[1]/*[@class='android.widget.TextView'])[1]");
+	public static By objSearchedContactName = By.xpath("(//*[@name='Contacts Favorites']/following-sibling::XCUIElementTypeOther/child::XCUIElementTypeOther/descendant::XCUIElementTypeOther/child::XCUIElementTypeScrollView/child::XCUIElementTypeOther/descendant::XCUIElementTypeOther/child::XCUIElementTypeOther)[1]");
+	
 	public static By objSearchedContactNumber = By.xpath("(((//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.widget.ScrollView' and ./parent::*[./parent::*[./parent::*[@class='android.widget.FrameLayout']]]]]/*[@class='android.view.ViewGroup'])[1]/*/*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']])[1]/*[@class='android.widget.TextView'])[2]");
-	public static By objAddToFavoriteIcon = By.xpath("((//*[@class='android.view.ViewGroup' and ./parent::*[@class='android.widget.ScrollView' and ./parent::*[./parent::*[./parent::*[@class='android.widget.FrameLayout']]]]]/*[@class='android.view.ViewGroup'])[1]/*/*[@class='android.view.ViewGroup' and ./parent::*[@class='android.view.ViewGroup']])[2]/child::android.widget.TextView");
-	public static By objNoFavoritesFoundMsg = By.xpath("//*[@text='No favorites found']");
+	
+	//public static By objAddToFavoriteIcon = By.xpath("(//XCUIElementTypeOther[@name=''])[1]");
+	
+	public static By objAddToFavoriteIcon = By.xpath("(//*[XCUIElementTypeScrollView]/descendant::XCUIElementTypeOther/child::XCUIElementTypeOther/child::XCUIElementTypeOther/child::XCUIElementTypeOther/descendant::XCUIElementTypeOther/child::XCUIElementTypeOther/child::XCUIElementTypeOther)[3]");
+	
+	public static By objNoFavoritesFoundMsg = By.xpath("//*[@name='No favorites found']"); 
+	
+	//Loads
+	public static By objGlobeRegLoad2000 = By.xpath("(//*[@name='Globe Regular Load 2000'])[1]");
+	
+	public static By objGlobeRegLoad3000 = By.xpath("(//*[@name='Globe Regular Load 3000'])[1]");
+	
+	public static By objLDLoad10 = By.xpath("(//*[@name='PHP 10 LD LD'])[2]");
+	
+	public static By objLDLoad2000 = By.xpath("(//*[@name='PHP 2000 LD2000 LD2000'])[2]");
+	
+	public static By objLDLoad3000 = By.xpath("(//*[@name='PHP 3000 LD3000 LD3000'])[2]");
+	
+	public static By objLDLoad500 = By.xpath("(//*[@name='PHP 500 LD500 REGULAR LOAD'])[2]");
+	
+	public static By objMaxLimitErrorMsg = By.xpath("//*[@name='The maximum E-load per transaction set for your verification level is P2,000.00. Please try again.']");
+	
+	
+	
+
 	public static By objNoContactsFoundMsg = By.xpath("//*[@text='No contacts found']");
 	public static By objBackToHomeBtn = By.xpath("//*[@text='Back To Home']");
 	public static By objAppInfo = By.xpath("//*[@text='App info']");

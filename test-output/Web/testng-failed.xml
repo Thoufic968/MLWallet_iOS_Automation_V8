@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [Web]" guice-stage="DEVELOPMENT">
+  <parameter name="testExecutionKey" value="PP-49"/>
+  <parameter name="runModule" value="Suite"/>
+  <parameter name="runMode" value="Suites"/>
+  <parameter name="browserType" value="Chrome"/>
+  <listeners>
+    <listener class-name="com.extent.ExtentReporter"/>
+  </listeners>
+  <test thread-count="1" name="Web(failed)">
+    <classes>
+      <class name="com.mlwallet.ios_scripts.MLWalletUseQR">
+        <methods>
+          <include name="init"/>
+          <include name="useQRSendMoneyToAnyMLWalletUser_QR_TC_02"/>
+        </methods>
+      </class> <!-- com.mlwallet.ios_scripts.MLWalletUseQR -->
+    </classes>
+  </test> <!-- Web(failed) -->
+</suite> <!-- Failed suite [Web] -->

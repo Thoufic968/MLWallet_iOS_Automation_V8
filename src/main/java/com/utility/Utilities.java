@@ -14,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.TakesScreenshot;
@@ -28,12 +29,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 import org.testng.asserts.SoftAssert;
 import com.driverInstance.DriverInstance;
+import com.driverInstance.Drivertools;
 import com.extent.ExtentReporter;
 import com.google.common.collect.Ordering;
 import org.openqa.selenium.Point;
 import com.propertyfilereader.PropertyFileReader;
 
-
+import chromeTest.ChromeTest;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
@@ -100,7 +102,7 @@ public class Utilities extends ExtentReporter {
 		return DriverInstance.tlDriver.get();
 	}
 
-	protected static WebDriver getWebDriver() {
+	public static WebDriver getWebDriver() {
 		return DriverInstance.tlWebDriver.get();
 	}
 
@@ -117,6 +119,7 @@ public class Utilities extends ExtentReporter {
 //	}
 
 	public void init() {
+		
 		PropertyFileReader handler = new PropertyFileReader("properties/Execution.properties");
 		setTimeout(Integer.parseInt(handler.getproperty("TIMEOUT")));
 		setRetryCount(Integer.parseInt(handler.getproperty("RETRY_COUNT")));
@@ -351,7 +354,7 @@ public class Utilities extends ExtentReporter {
 			softAssert.assertEquals(false, true, "Element" + validationtext + " " + " is not visible");
 			logger.info("Element " + validationtext + " " + " is not visible");
 			extent.extentLoggerFail("checkElementPresent", "" + validationtext + " is not displayed");
-			screencapture();
+		//	screencapture();
 //			softAssert.assertAll();
 			return false;
 		}
@@ -3532,7 +3535,7 @@ public class Utilities extends ExtentReporter {
 			 List<WebElement>lists=getDriver().findElements(by);
 			 for(WebElement e : lists)
 			 {
-				 System.out.println(e.getAttribute(attribute));
+				 //System.out.println(e.getAttribute(attribute));
 				 if(e.getAttribute(attribute).equalsIgnoreCase(text))
 				 {
 					 flag=true;
@@ -3543,6 +3546,33 @@ public class Utilities extends ExtentReporter {
 			 }
 			 if(!flag)
 			 newScrollMethodVertical(0.5, 0.8, 0.5, 0.2);
+			 a++;
+			break;
+		 }while(!flag || a==5);
+		return flag;
+		 
+	 }
+	 
+	 public boolean scroll_To_Text_Horizontal(By by,String attribute,String text)
+	 {
+		 int a=0;
+		 boolean flag=false;
+		 do {
+			 List<WebElement>lists=getDriver().findElements(by);
+			 for(WebElement e : lists)
+			 {
+				 System.out.println(e.getAttribute(attribute));
+				 if(e.getAttribute(attribute).equalsIgnoreCase(text))
+				 {
+					 flag=true;
+					 System.out.println("Found the value == : "+text);
+					 break;
+				 }
+				 
+			 }
+			 if(!flag)
+		       newScrollMethodVertical(0.2, 0.5, 0.8, 0.5);
+			// newScrollMethodVertical(0.5, 0.8, 0.5, 0.2);
 			 a++;
 			break;
 		 }while(!flag || a==5);
@@ -3565,6 +3595,34 @@ public class Utilities extends ExtentReporter {
 	 }
 	 
 	 
+	 public boolean scroll_To_Text_Verical_Down(By by,String attribute,String text)
+	 {
+		 int a=0;
+		 boolean flag=false;
+		 do {
+			 List<WebElement>lists=getDriver().findElements(by);
+			 for(WebElement e : lists)
+			 {
+				 System.out.println(e.getAttribute(attribute));
+				 if(e.getAttribute(attribute).equalsIgnoreCase(text))
+				 {
+					 flag=true;
+					 System.out.println("Found the value == : "+text);
+					 break;
+				 }
+				 
+			 }
+			 if(!flag)
+				// newScrollMethodVertical(0.5, 0.8, 0.5, 0.2);
+			 newScrollMethodVertical(0.5, 0.3, 0.5, 0.9);
+			 a++;
+			break;
+		 }while(!flag || a==5);
+		return flag;
+		 
+	 }
+	 
+	 
 	 public void tapUsingCoordinates(int x, int y) throws Exception {
 	        TouchAction t=new  TouchAction(getDriver());
 	        try
@@ -3578,6 +3636,65 @@ public class Utilities extends ExtentReporter {
 	            extentLoggerFail("Tap", "Failed to Tap on"+x+","+y+" co-ordinates");
 	        }
 	    }
+	 
+	 public  void switchPlatformToWeb(String url) throws InterruptedException {
+	       // new DriverInstance("mlwalllet"); 
+	       // waitTime(5000);
+	       // setPlatform("Web");
+	       // Drivertools.setPlatfrom("Web");
+	       // getWebDriver().get(url); 
+		   // System.out.println(url);
+		    ChromeTest.LaunchBrowser("Chrome",url);
+	        logger.info("Platform switched to Web Browser for QR Code");
+	        extentLogger("","Platform switched to Web Browser for QR Code");
+	    }
+	 
+
+
+	    public  void switchPlatformToAndroid() {
+	        waitTime(6000);
+	     //   new Utilities().setPlatform("MLWallet_iOS");
+	        getDriver().activateApp("com.mlhuillier.mlwallet");
+	        System.out.println(new Utilities().getPlatform());
+	        initDriver();
+	        logger.info("Platform switched back to iOS");
+	        extentLogger("","Platform switched back to iOS");
+
+	    }
+
+	    public  void closeWebBrowser() {
+	        ChromeTest.tearDown();
+	        logger.info("Web Browser Closed");
+	        extentLogger("","Web Browser Closed");
+	    }
+	    
+	    public  void pullToRefresh1(){
+
+	        int deviceWidth = getDriver().manage().window().getSize().getWidth();
+	        int deviceHeight = getDriver().manage().window().getSize().getHeight();
+	        int midX = (deviceWidth / 2);
+	        int midY = (deviceHeight / 2);
+	        int bottomEdge = (int) (deviceHeight * 0.85f);
+	        new TouchAction(getDriver())
+	                   .press(PointOption.point(midX, midY))
+	                   .waitAction(WaitOptions.waitOptions(Duration.ofMillis(1000)))
+	                   .moveTo(PointOption.point(midX, bottomEdge))
+	                .release().perform();
+	    }
+	    
+	    
+
+	    public void clearWebField(By locator) {
+
+	            WebElement element = getDriver().findElement(locator);
+	            while (!element.getAttribute("name").equals("")) {
+	                element.sendKeys(Keys.BACK_SPACE);
+	            }
+	     }
+
+	     
+
+	     
 	 
 	
 }

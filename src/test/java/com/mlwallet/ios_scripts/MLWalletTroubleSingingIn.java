@@ -65,7 +65,7 @@ public class MLWalletTroubleSingingIn {
     @Test(priority = 9)
     public void troubleSigningInEmptyRegisteredMobileNumberFunctionality_TS_TC_17() throws Exception {
         MLWalletBusinessLogic.troubleSigningInEmptyRegisteredMobileNumberFunctionality_TS_TC_17();
-    }
+    } 
 
 
 

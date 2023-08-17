@@ -10,7 +10,7 @@ public class MLWalletLoginPage {
 
 	public static By objLoginBtn=By.xpath("//*[@name='208465' or @label='Login']");
 	
-	public static By objOtpTextField=By.xpath("//*[@name='94NMBE-0 94NMBE-1 94NMBE-2 94NMBE-3 94NMBE-4 94NMBE-5']");
+	public static By objOtpTextField=By.xpath("//*[@name='94NMBE-0 94NMBE-1 94NMBE-2 94NMBE-3 94NMBE-4 94NMBE-5']/descendant::XCUIElementTypeOther/child::XCUIElementTypeTextField");
 	
 	public static By objResendCode = By.xpath("(//*[@name='Did not receive OTP?']/following::XCUIElementTypeStaticText)[2]");
 
@@ -20,7 +20,9 @@ public class MLWalletLoginPage {
 
 	public static By objOneTimePin = By.xpath("//*[@name='textInput' or @label='One Time Pin']"); 
 	
-	public static By objOTP = By.xpath("//*[@label='One Time Pin']");
+	public static By objOTP = By.xpath("((//XCUIElementTypeStaticText[@name='One Time Pin'])[3]/ancestor::XCUIElementTypeOther/descendant::XCUIElementTypeOther/child::XCUIElementTypeStaticText)[2]");
+	
+	public static By objSeconds = By.xpath("((//XCUIElementTypeStaticText[@name='One Time Pin'])[3]/ancestor::XCUIElementTypeOther/descendant::XCUIElementTypeOther/child::XCUIElementTypeStaticText)[3]");
 	
 	public static By objOneTimePin1 = By.xpath("(//*[@name='textInput'])[1]");
 	
@@ -78,8 +80,16 @@ public class MLWalletLoginPage {
 	
 	//New OTP Handle
 	
-	public static By objOtpContineBtn = By.xpath("(//*[@name='CONTINUE'])[3]");
+	public static By objOtpContineBtn = By.xpath("(//*[@label='CONTINUE'])[3]");
 	
 	public static By objCancelBtn = By.xpath("(//*[@name='CANCEL'])[3]");
+	
+	public static By objCameraPopup = By.xpath("//XCUIElementTypeStaticText[@name='“ML Wallet” Would Like to Access the Camera']");
+	
+	public static By objCamPopUpOKBtn = By.xpath("//XCUIElementTypeButton[@name='OK']");
+	
+	public static By objDntAllowBtn = By.xpath("//XCUIElementTypeButton[@name='Don’t Allow']");
+	
+	public static By objCurrentLocPopUp = By.xpath("//XCUIElementTypeStaticText[@name='“https://mlhuillier.com” Would Like To Use Your Current Location']");
 
 }

@@ -101,8 +101,15 @@ public class ExtentReporter implements ITestListener  {
 		return DriverInstance.tlDriver.get();
 	}
 
-	private WebDriver getWebDriver() {
-		return DriverInstance.tlWebDriver.get();
+//	private WebDriver getWebDriver() {
+//		return DriverInstance.tlWebDriver.get();
+//	}
+	
+	
+
+	
+	public static WebDriver getWebDriver() {
+		return DriverInstance.tlWebDriver.get();	
 	}
 
 	
@@ -162,8 +169,8 @@ public class ExtentReporter implements ITestListener  {
 		
 		//System.out.println(DriverInstance.getRunModule());
 		if ((Stream.of(result.getName(), "Suite").anyMatch(DriverInstance.getRunModule()::equals)
-				&& DriverInstance.startTest) || result.getName().equals("Login")
-				|| result.getName().equals("PWAWEBLogin")) {
+				&& DriverInstance.startTest) //|| result.getName().equals("Login")
+				|| result.getName().equals("PWAWEBLogin")||result.getName().equals("useQRSendMoneyToAnyMLWalletUser_QR_TC_02")){
 			DriverInstance.methodName = result.getName();
 			logger.info(":::::::::Test " + result.getName() + " Started::::::::");
 //======================================new lines====================================================			
@@ -264,8 +271,9 @@ public class ExtentReporter implements ITestListener  {
 			
 		try {
 			if ((getDriver() != null) || (getWebDriver()) != null) {
-				// System.out.println("result.getName():"+result.getName());
+				//System.out.println("result.getName():"+result.getName());
 				try {
+					
 					screencapture();
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
@@ -278,12 +286,12 @@ public class ExtentReporter implements ITestListener  {
 			}
 
 		} finally {
-			try {
-				logger.info("::::::::::Relaunching The App::::::::::");
-				ob.init();
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
+//			try {
+//				logger.info("::::::::::Relaunching The App::::::::::");
+//				ob.init();
+//			} catch (InterruptedException e) {
+//				e.printStackTrace();
+//			}
 					
 		}
 //		mailBodyPart.add(result.getName()+","+ExcelUpdate.passCounter+","+ExcelUpdate.failCounter);

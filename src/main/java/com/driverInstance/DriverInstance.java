@@ -81,10 +81,7 @@ public class DriverInstance extends Drivertools {
 			case "MLWallet_iOS":	
 				tlDriver.set((AppiumDriver<WebElement>) new IOSDriver<WebElement>(new URL(getremoteUrl()), this.generateiOSCapabilities(Application)));
 				break;
-				
-			
-				
-				
+						
 			default:
 				throw new SkipException("Incorrect Platform...");
 			}
@@ -178,7 +175,7 @@ public class DriverInstance extends Drivertools {
 			iOScapabilities.setCapability(MobileCapabilityType.AUTO_WEBVIEW, true);
 		}else{
 			iOScapabilities.setCapability("deviceName", "iOS");
-			iOScapabilities.setCapability("udid", "00008101-0013245C2600801E");
+			iOScapabilities.setCapability("udid", "00008120-000668E63AC0C01E"); //00008101-0013245C2600801E
 			//00008101-0013245C2600801E
 			//iOScapabilities.setCapability(MobileCapabilityType.FULL_RESET, true);
 			iOScapabilities.setCapability(MobileCapabilityType.NO_RESET, false);
@@ -243,7 +240,7 @@ public class DriverInstance extends Drivertools {
 			WebDriverManager.firefoxdriver().version("0.26.0").setup();
 			tlWebDriver.set(new FirefoxDriver());
 		} else if (browserName.equalsIgnoreCase("Chrome")) {
-			WebDriverManager.chromedriver().version(getDriverVersion()).setup();
+			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("start-maximized");
 			options.addArguments("enable-automation");
@@ -285,7 +282,7 @@ public class DriverInstance extends Drivertools {
 			WebDriverManager.firefoxdriver().version("0.26.0").setup();
 			tlWebDriver.set(new FirefoxDriver());
 		} else if (browserName.equalsIgnoreCase("Chrome")) {
-			WebDriverManager.chromedriver().version("86.0.4240.22").setup();
+			WebDriverManager.chromedriver().version("114.0.5735.90").setup();
 			
 			
 			ChromeOptions options = new ChromeOptions();
@@ -337,5 +334,8 @@ public class DriverInstance extends Drivertools {
 		} else {
 			System.out.println("Appium Server already running on Port - " + port);
 		}
+		
+		
 	}
+	
 }

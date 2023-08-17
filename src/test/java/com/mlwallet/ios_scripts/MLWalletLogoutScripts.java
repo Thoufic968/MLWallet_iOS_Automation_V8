@@ -23,7 +23,7 @@ public class MLWalletLogoutScripts {
     }
 
     @Test(priority = 2)
-    public void logOutAppKillAndRelaunch() throws Exception {
+    public void logOutAppKillAndRelaunchLout_TC_04() throws Exception {
         MLWalletBusinessLogic.logOutAppKillAndRelaunch_Lout_TC_04();
     }
 

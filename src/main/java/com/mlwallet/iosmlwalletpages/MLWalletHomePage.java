@@ -44,7 +44,7 @@ public class MLWalletHomePage {
     
     public static By objSendTransferIcon = By.xpath("//*[@name='AY6EU5']");
     
-    public static By objMLLoans = By.xpath("//*[@label='ML Loans' or @name='FJZ9EM']");
+    public static By objMLLoans = By.xpath("//*[@name='Loans']");
     
     public static By objUseQR = By.xpath("//*[@label='Use QR' or @name='RQSICY']");
     
@@ -67,6 +67,14 @@ public class MLWalletHomePage {
     public static By objIIcon = By.xpath("//*[@name=' Learn more about your account level by clicking here.']");
     
     public static By objVerificationTierPerks = By.xpath("//*[@name='Verification Tier Perks']");
+    
+    public static By objDoYouHaveAnotherAccBtn = By.xpath("//*[@name='SYOFR5']");
+    
+    public static By objAddAccFacility = By.xpath("//*[@name='ML Wallet Add Account Facility']");
+    
+    public static By objViewTier = By.xpath("//*[@name='BRANCH VERIFIED TIER BRANCH VERIFIED View Tier ' or @name='SEMI VERIFIED TIER SEMI VERIFIED View Tier ' or @name='FULLY VERIFIED TIER FULLY VERIFIED View Tier ']");
+    
+   // public static By objViewTier = By.xpath("//*[contains(@name,'BRANCH VERIFIED TIER BRANCH VERIFIED View Tier ' or @name,'SEMI VERIFIED TIER SEMI VERIFIED View Tier ')]");
     
     public static By objMaxBalanceText = By.xpath("//*[@label='Max. Balance:']");
     
@@ -102,13 +110,13 @@ public class MLWalletHomePage {
     
     public static By objViewTierBranchVerified = By.xpath("//*[@name='BRANCH VERIFIED TIER BRANCH VERIFIED View Tier ']");
     
-    public static By objViewTierBuyierTierVerified = By.xpath("//*[@name='BUYER TIER BUYER View Tier ']");
+    public static By objViewTierBuyierTierVerified = By.xpath("//*[@name='BUYER TIER BUYER View Tier ' or @name='SEMI VERIFIED TIER SEMI VERIFIED View Tier ']");
     
     public static By objSupport = By.xpath("//*[@label='Support']");
     
     public static By objAbout = By.xpath("//*[@label='About']");
     
-    public static By objTier = By.xpath("//*[contains(@name,'Verified Tier Perks')]");
+    public static By objTier = By.xpath("//*[contains(@label,'Verified Tier Perks')]");
     
     public static By objSemiVerified = By.xpath("//*[@label='Semi Verified']");
     
@@ -118,14 +126,20 @@ public class MLWalletHomePage {
     
     public static By objUpgradeTierLevelBtn = By.xpath("//*[@label='Upgrade Tier Level']");
     
-    
-    public static By objPopUpMsg = By.xpath("//*[@resource-id='com.android.permissioncontroller:id/permission_message']");
+   
+    public static By objPopUpMsg = By.xpath("//XCUIElementTypeStaticText[@name='“ML Wallet” Would Like to Access Your Contacts' or @name='Allow “ML Wallet” to use your location?']");
     
     public static By obPopupAllowBtn = By.xpath("//*[@name='Allow']");
     
-    public static By objContactPopUpAllowBtn = By.xpath("//*[@resource-id='com.android.permissioncontroller:id/permission_allow_button']");
+   // public static By obPopupAllowBtn = By.xpath("//*[@name='Allow']");
+    
+    
+    public static By objContactPopUpAllowBtn = By.xpath("//*[@name='OK']");
+    
     public static By objLocationPopUpAllowOnceBtn = By.xpath("//*[@resource-id='com.android.permissioncontroller:id/permission_allow_one_time_button']");
-    public static By objPopUpDenyBtn = By.xpath("//*[@resource-id='com.android.permissioncontroller:id/permission_deny_button']");
+   
+    public static By objPopUpDenyBtn = By.xpath("//*[@name='Don’t Allow']");
+   
     public static By objContactPopupDenyBtn = By.xpath("//*[@resource-id='com.android.permissioncontroller:id/permission_deny_and_dont_ask_again_button']");
     public static By objPermissionDeniedPopUp = By.xpath("(//*[@resource-id='something']/following-sibling::android.widget.TextView)[1]");
     public static By objOpenSettingBtn = By.xpath("//*[@resource-id='modal-confirm-button']/child::android.widget.TextView");

@@ -55,12 +55,12 @@ public class MLWalletLoginScripts {
 
 	
 	@Test(priority = 1)
-	public void LogInScenarioWithValidMobNumber() throws Exception { // MLWalletBusinessLogic.gmail();
+	public void LogInScenarioWithValidMobNumber_Lgn_TC_01() throws Exception { // MLWalletBusinessLogic.gmail();
 		MLWalletBusinessLogic.LogInScenarioWithValidMobNumber_Lgn_TC_01();
 	}
 
 	@Test(priority = 2)
-	public void LogInScenarioWithInvalidMobNumber() throws Exception {
+	public void LogInScenarioWithInvalidMobNumber_Lgn_TC_02() throws Exception {
 		MLWalletBusinessLogic.LogInScenarioWithInvalidMobNumber_Lgn_TC_02();
 	}
 
@@ -135,6 +135,6 @@ public class MLWalletLoginScripts {
 	@Test(priority = 16)
 	public void loginOTPContinueBtnFunctionality_Lgn_TC_26() throws Exception {
 		MLWalletBusinessLogic.loginOTPContinueBtnFunctionality_Lgn_TC_26();
-	}
+	} 
 	
 }

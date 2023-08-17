@@ -9,7 +9,7 @@ public class MLWalletCashOutPage {
    //======================================== ML Branch ============================================//
     public static By objToAnyMLBranch = By.xpath("(//*[@name='To any ML Branch '])[2]");
     
-    public static By objCashOutToBranch = By.xpath("//*[@label='Cash Out To Branch']");////*[@name='W11SDY']
+    public static By objCashOutToBranch = By.xpath("//*[@name='W11SDY']");   //*[@label='Cash Out To Branch']
 
     public static By objAmountField = By.xpath("//*[@name='0.00']/XCUIElementTypeTextField");
 

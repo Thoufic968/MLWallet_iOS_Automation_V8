@@ -20,7 +20,25 @@ public class MLWalletSettingsPage {
 	
 	public static By objDeleteAccount = By.xpath("(//*[@name='Delete Account'])[2]");
 	
+	public static By objDeleteAccountBtn = By.xpath("(//XCUIElementTypeOther[@name='Delete Account'])[2]");
+	
+	public static By objIWantToStay = By.xpath("//*[@name='I Want To Stay']");
+	
+	public static By objDeleteAccountBackBtn = By.xpath("//*[@name='']");
+	
+	public static By objWarningHeader = By.xpath("//*[contains(@name,'Before you go make sure you don’t leave anything behind!')]");
+	
+	public static By objWarningHeaderOptions = By.xpath("//*[@name='Before you go make sure you don’t leave anything behind!']/parent::XCUIElementTypeOther/descendant::XCUIElementTypeOther/child::XCUIElementTypeStaticText");
+	
 	public static By objProceedBtn = By.xpath("//*[@label='Proceed']");
+	
+	public static By objDeleteAccountMLPin = By.xpath("//*[@label='Delete Account ML Pin']");
+	
+	public static By objEnterCurrentMLPinHeader = By.xpath("//*[@label='Enter Current ML PIN']");
+	
+	
+	public static By objInvalidMLPinMsg = By.xpath("//*[@label='You have entered an invalid PIN. Please try again.']");
+	
 	
 	public static By objAccountDetails=By.xpath("(//*[@name='Account Details '])[2]");
 	
@@ -103,6 +121,10 @@ public class MLWalletSettingsPage {
 	public static By objNatureOfRequests = By.xpath("(//XCUIElementTypeOther[@name='Nature of your request Required question'])[2]/XCUIElementTypeOther/child::XCUIElementTypeOther/following-sibling::XCUIElementTypeOther/child::XCUIElementTypeStaticText");
 	//(//XCUIElementTypeOther[@name='Nature of your request Required question'])[2]/XCUIElementTypeOther/child::XCUIElementTypeOther
 	public static By objDeleteConfirmationPopUp = By.xpath("//*[@label='Are you sure you would like to delete your account?']");
+	
+	public static By objDeleteConfirmationPopUpTwo = By.xpath("//*[@label='If you would like to proceed, you will need to enter your ML Pin.']");
+	
+	
 	
 	public static By objCancelBtn = By.xpath("//*[@label='Cancel']");
 	
